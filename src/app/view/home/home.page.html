@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id='title'>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <ion-item>
+      <ion-input label="Primeiro número" type="number" placeholder="insira um numero" [(ngModel)]="n1"></ion-input>
+    </ion-item>    
+    <ion-item>
+      <ion-input label="Segundo número" type="number" placeholder="insira outro numero" [(ngModel)]="n2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Operação" placeholder="escolha" [(ngModel)]="escolha">
+        <ion-select-option value="0">Dividir</ion-select-option>
+        <ion-select-option value="1">Somar</ion-select-option>
+        <ion-select-option value="2">Multiplicar</ion-select-option>
+        <ion-select-option value="3">Subtrair</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+
+
+  <ion-button expand="full" (click)="cadastrar()" >Calcular</ion-button>
+</ion-content>
+
+
